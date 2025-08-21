@@ -2,7 +2,7 @@
 
 ```bash
 docker compose up -d
-
+```
 
 Просмотр данных/таблицы:
 
@@ -11,6 +11,7 @@ docker exec -it tick_db psql -U root -d tick -c "\d staging_orders" - струк
 docker exec -it tick_db psql -U root -d tick -c "\d active_orders" - структура таблицы ACTIVE_ORDERS с активными (обработанными) данными
 docker exec -it tick_db psql -U root -d tick -c "SELECT * FROM staging_orders LIMIT 500;" - 500 строк с сырыми данными
 docker exec -it tick_db psql -U root -d tick -c "SELECT * FROM active_orders LIMIT 500;" - 500 строк с обработанынми заявками
+```
 
 Запуск скриптов:
 ```bash
