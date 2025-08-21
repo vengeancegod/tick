@@ -18,3 +18,6 @@ docker exec -it tick_db psql -U root -d tick -c "SELECT * FROM active_orders LIM
 cd bsbp-test
 python3 src/load.py (загрузит данные из .csv в таблицу staging_orders)
 python3 src/transform.py (обработает данные из таблицы staging_orders и загрузит их в таблицу active_orders; выведет результат запроса с самой высокой ценой покупки и активной заявке с самой низкой ценой продажи по заданному инструменту, заданный инструмент указывается в функции get_best_prices('SiZ4'))
+```
+
+Данные брать с https://ftp.moex.com/pub/info/data/Derivatives%20Market/OrderLog20241001_A.7z , файл 20241001_fut_ord.csv поместить в папку /data
